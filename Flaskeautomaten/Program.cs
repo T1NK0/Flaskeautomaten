@@ -11,6 +11,8 @@ namespace Flaskeautomaten
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Project is starting");
+
             Thread threadUser = new Thread(producer.CreateDrink);
             Thread threadSplitter = new Thread(splitter.SplitDrinks);
             Thread threadSodaConsumer = new Thread(consumer.ConsumeSoda);
@@ -22,6 +24,7 @@ namespace Flaskeautomaten
             threadBeerConsumer.Start();
 
             Console.ReadLine();
+
         }
     }
 }
